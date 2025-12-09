@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+/* ჰედერი მთლიან ეკრანზე */
+.site-header {
+    background: #000;
+    width: 100%;       /* მთლიანი სიგანე */
+    position: fixed;   /* ყოველთვის ეკრანზე */
+    top: 0;
+    left: 0;
+    z-index: 1000;     /* სხვებზე ზემოდან */
+}
+
+/* შიდა კონტეინერი ცენტრალიზაცია */
+.header-inner {
+    max-width: 1200px; /* არ ცვლის მაგარ ზომებს */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ცენტრალური ელემენტები */
+    gap: 20px;
+}
+
+
+.logo {
+  font-size: 22px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.highlight:hover {
+  color: #ff6600;
+}
+
+
+/* Burger */
+.menu-icon {
+  font-size: 30px;
+  display: none;
+  cursor: pointer;
+  margin-right: right;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+
+/* CONTENT */
+
+/* ABOUT SECTION */
+.about-section {
+  max-width: 1200px;
+  margin: 80px auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  letter-spacing: 0.6px;
+  margin-top: 20px;
+}
+
+.about-box {
+  background: #000;
+  border: 2px solid #fff;
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.about-box p {
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+
+
+
+/* TITLE */
+#question1 {
+  text-align: center;
+  margin: 30px 10px;
+  font-size: 38px;
+}
+
+/* BOX CONTAINER */
+.box-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* ყველა ბოქსი ერთი სიმაღლის */
+}
+
+/* COURSE CARD */
+.course-card {
+  background: #000;
+  border: 2px solid #fff;
+  min-width: 260px;
+  width: calc(33.333% - 17px);
+  max-width: 380px;
+  padding: 18px;
+
+  display: flex;            /* Flexbox გააქტიურება */
+  flex-direction: column;   /* ელემენტები სვეტად განლაგდნენ */
+}
+
+
+
+
+/* CARD HEAD */
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.badge {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.card-title3 {
+  font-size: 18px;
+    color: red;
+}
+
+/* LINES */
+.sep {
+  height: 2px;
+  background: #fff;
+  border: none;
+  margin: 10px 0;
+}
+
+.sep2 {
+  height: 2px;
+  background: #ffffff;
+  border: none;
+  margin-top: 371px;
+}
+
+.sep3 {
+  height: 2px;
+  background: #ffffff;
+  border: none;
+  margin-top: 455px;
+}
+.sep.short {
+  width: 60%;
+  align-self: center;
+}
+
+/* TEXT */
+.tagline {
+  text-align: center;
+  font-size: 18px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-body ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.card-body li {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.note {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.price {
+  margin-top: auto; /* ყოველთვის ბოლოში */
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
+
+/* RESPONSIVE */
+/* მხოლოდ მობილური ჰედერისთვის */
+@media (max-width: 700px) {
+  .header-inner {
+    display: flex;
+    justify-content: space-between; /* ლოგო მარცხნივ, ბურგერი მარჯვნივ */
+    align-items: center;
+    position: relative; /* აუცილებელია absolute Nav-ul-ისთვის */
+    width: 100%;
+    padding: 15px;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    margin-right: -110px;
+  }
+
+  .main-nav ul {
+    display: none;
+    position: absolute;  /* ბურგერის ქვეშ */
+    top: 100%;           /* პირდაპირ ბურგერის ქვემოთ */
+    left: 50%;           /* ცენტრში */
+    transform: translateX(-50%); /* ნავიგაციის ცენტრში გამოტანა */
+    background: #000;
+    flex-direction: row; /* ჰორიზონტალურად რიგში */
+    gap: 1px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  #menu-toggle:checked + .menu-icon + .main-nav ul {
+    display: flex;
+  }
+
+  .main-nav li a {
+    text-align: center;
+    font-size: 15px;
+    padding: 8px 10px;
+    display: block;
+  }
+}
+
+
+
+
+/* CONTACT SECTION */
+
+/* CONTACT SECTION */
+.contact-section {
+  max-width: 1200px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.contact-box {
+  background: #000;
+  border: 2px solid #fff;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-box p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.contact-phone {
+    color: rgb(255, 255, 255); /* თეთრი */
+}
+
+
+@media (max-width: 700px) {
+  .contact-phone {
+    color: #fff;           /* ფერი, რაც გინდა */
+    text-decoration: none; /* ჩქროლით ხაზის ამოღება */
+}
+  }
